@@ -4,18 +4,13 @@ get '/' do
   "hello!"
 end
 
-get '/secret' do
-  "This is a secret! You shouldn't be looking at it!"
+get '/random-cat' do
+  @name = ["Amigo", "Oscar", "Viking"].sample
+  erb(:index)
 end
 
-get '/new' do
-  "another page"
-end
-
-get '/finaladdition' do
-  "here we are"
-end
-
-get '/cat' do
+get '/named-cat' do
+  p params[:name]
+  @name = params[:name]
   erb(:index)
 end
