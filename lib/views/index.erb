@@ -1,13 +1,21 @@
-<% if @name %>
-  <h1> My name is <%= @name %></h1>
-<% end %>
+<!DOCTYPE html>
+<html>
+<head>
+<link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css" />
+</head>
+  <body>
+    <% if @name %>
+      <h1> My name is <%= @name %></h1>
+    <% end %>
 
-<form action="/named-cat" method="post">
-    Name: <input type="text" name="name">
-    <input type="submit" value="Submit">
-</form>
+    <form action="/named-cat" method="post">
+        Name: <input type="text" name="name">
+        <input type="submit" value="Submit">
+    </form>
 
 
-<div>
-<img src='http://bit.ly/1eze8aE' style = 'border: 3px dashed red'>
-</div>
+    <div>
+      <img src='http://bit.ly/1eze8aE'>
+    </div>
+  </body>
+</html>
